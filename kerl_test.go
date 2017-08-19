@@ -1,0 +1,12 @@
+package giota
+
+import "testing"
+
+func TestCurl1(t *testing.T) {
+	trytes := Trytes("GYOMKVTSNHVJNCNFBBAH9AAMXLPLLLROQY99QN9DLSJUHDPBLCFFAIQXZA9BKMBJCYSFHFPXAHDWZFEIZ")
+	hh := Trytes("OXJCNFHUNAHWDLKKPELTBFUCVW9KLXKOGWERKTJXQMXTKFKNWNNXYD9DMJJABSEIONOSJTTEVKVDQEWTW")
+	h := trytes.Hash1()
+	if hh != h {
+		t.Error("hash is illegal.")
+	}
+}
